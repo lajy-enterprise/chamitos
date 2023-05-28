@@ -10,6 +10,7 @@
         * {
 	        box-sizing: border-box;
         }
+        
         div#main {
             display: block;
             height: 800px;
@@ -44,31 +45,39 @@
             transition: all 0.1s ease-out;
         }
         .button:hover {
-            background: #44fd82;
+            /* background: #44fd82; */
             animation: hue-rotate 10s linear infinite;
             color: #fff;
         }
         .button:active {
             transform: scale(0.95);
             animation: hue-rotate 10s linear infinite;
-            background: #44fd82;
+            /* background: #44fd82; */
         }
         .button--bubble {
             position: relative;
             z-index: 2;
-            color: white;
-            background: #5e9092;
+            color: #000000 !important;
+            width: 200px !important;
+            /* background: #5e9092; */
+            background-image: url(./assets/botones/nube.gif) !important;;
+            background-position: center -13px !important;
+            background-size: 200px 70px !important;
+            background-repeat: no-repeat !important;
         }
-        .button--bubble:hover {
+        /* .button--bubble:hover {
+            background: #44fd82;
+        } */
+        .button--bubble__effect-container .circle {
             animation: hue-rotate 10s linear infinite;
-            background: #44fd82;
+            background: #44fd82 !important;
         }
-        .button--bubble:hover + .button--bubble__effect-container .circle {
+        /* .button--bubble:hover + .button--bubble__effect-container .circle {
+             background: #44fd82;
+        } */
+        /* .button--bubble:hover + .button--bubble__effect-container .button {
             background: #44fd82;
-        }
-        .button--bubble:hover + .button--bubble__effect-container .button {
-            background: #44fd82;
-        }
+        } */
         .button--bubble:active + .button--bubble__effect-container {
             transform: scale(0.95);
         }
@@ -84,7 +93,7 @@
             left: 25%;
             z-index: 1;
             transform: translateY(-50%);
-            background: #222;
+            /* background: #222; */
             transition: background 0.1s ease-out;
         }
         .button--bubble__effect-container {
