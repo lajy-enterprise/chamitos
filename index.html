@@ -164,7 +164,7 @@
 <body style="background: linear-gradient(to left,blue, rgb(255, 166, 0));">
     <div id="main">
         <span class="button--bubble__container">
-            <a href="https://instagram.com/chamitos__?igshid=MmIzYWVlNDQ5Yg==" target="_blank" class="button button--bubble">
+            <a  onclick="irAUrl(0)" target="_blank" class="button button--bubble">
                 Instagram <i class="fa-brands fa-instagram fa-xl" style="color: #E1306C;"></i>
             </a>
             <span class="button--bubble__effect-container" >
@@ -183,7 +183,7 @@
         <br>
         <br>
         <span class="button--bubble__container">
-            <a href="https://www.facebook.com/profile.php?id=100009338979181&mibextid=LQQJ4d" target="_blank" class="button button--bubble">
+            <a onclick="irAUrl(1)" target="_blank" class="button button--bubble">
                 Facebook <i class="fa-brands fa-facebook fa-xl" style="color: #0165E1;"></i>
             </a>
             <span class="button--bubble__effect-container">
@@ -202,7 +202,7 @@
         <br>
         <br>
         <span class="button--bubble__container">
-            <a href="https://wa.me/message/RBAWTH5AOFIBN1" target="_blank" class="button button--bubble">
+            <a onclick="irAUrl(2)" target="_blank" class="button button--bubble">
                 WhatsApp <i class="fa-brands fa-whatsapp fa-xl" style="color: #25D366;"></i>
             </a>
             <span class="button--bubble__effect-container">
@@ -244,6 +244,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
     
     <script >
+        function irAUrl(url){
+            const rutas = ["https://instagram.com/chamitos__?igshid=MmIzYWVlNDQ5Yg==","https://www.facebook.com/profile.php?id=100009338979181&mibextid=LQQJ4d","https://wa.me/message/RBAWTH5AOFIBN1"];
+            // console.log(rutas[url]);
+            setTimeout(() => {
+                // console.log(rutas[url]);
+                window.open(rutas[url]);
+            }, 1500);
+        };
+
         $('.button--bubble').each(function() {
             var $circlesTopLeft = $(this).parent().find('.circle.top-left');
             var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
